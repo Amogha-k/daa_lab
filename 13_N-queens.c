@@ -4,7 +4,7 @@ an N×N chessboard such that no two queens attack each other. A queen can
 attack horizontally, vertically, or diagonally. Given an integer N, return all
 distinct solutions to the N-queens puzzle. Note: Use Backtracking technique.
 */
-
+//this comes under dynamic programming
 #include <stdio.h>
 #include <math.h>
 #define FALSE 0
@@ -22,11 +22,11 @@ int can_place(int k_th_queeen, int position)
     }
     return TRUE;
 }
-
+                  //1
 void n_queens(int k_th_queeen, int no_queens)
 {
     for (int position = 1; position <= no_queens; position++)
-    {
+    {                 
         if (can_place(k_th_queeen, position))
         {
             x[k_th_queeen] = position;
@@ -47,6 +47,7 @@ void n_queens(int k_th_queeen, int no_queens)
         }
     }
 }
+
 
 int main()
 {
